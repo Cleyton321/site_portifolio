@@ -50,49 +50,6 @@ header ul a {
     font-size: 0.83rem;
 }
 
-.hamburguer {
-    padding-left: 1.5rem;
-}
-
-.hamburguer a {
-    width: 37px;
-    height: 37px;
-    display: flex;
-    border-radius: 50%;
-    background-color: rgba(115, 115, 115, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    justify-content: center;
-    align-items: center;
-}
-
-.hamburguer .barras {
-    position: relative;
-    width: 52%;
-    height: 1.3px;
-    background-color: red;
-    border-radius: 2px;
-}
-
-.hamburguer .barras::before, .hamburguer .barras::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 100%;
-    background-color: inherit;
-    border-radius: 2px;
-}
-
-.hamburguer .barras::before {
-    top: -4.5px;
-}
-
-.hamburguer .barras::after{
-    top: 4.5px;
-}
-
 #home {
     font-family: Agrandir Grand;
     color: #545454;
