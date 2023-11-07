@@ -1,8 +1,10 @@
+/* Definição da fonte personalizada */
 @font-face {
     font-family: "Agrandir Grand";
     src: url(Fontes/agrandir-grand-heavy.otf) format('opentype');
 }
 
+/* Reset CSS básico */
 *,
 *::before,
 *::after {
@@ -11,24 +13,41 @@
     box-sizing: border-box;
 }
 
-body {
+/* Estilos gerais do contêiner da página */
+.container {
     background-image: linear-gradient(to right, #b8b8b8, #ffffff);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 500vh;
 }
 
+/* Estilos do logotipo */
 .logo {
     width: 75px;
     height: 75px;
 }
 
-header {
+/* Estilos do cabeçalho */
+.header {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+
 }
 
-header nav {
+header.scroll {
+    background-color: #545454;
+    padding: 5px 4%;
+}
+
+header.scroll ul a {
+    color: #cb6ce6;
+}
+
+.header nav {
     background-color: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 auto;
     padding: 0 2rem;
@@ -37,13 +56,13 @@ header nav {
     align-items: center;
 }
 
-header ul {
+.header ul {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
-header ul a {
+.header ul a {
     font-family: Agrandir Grand;
     text-decoration: none;
     color: #545454;
@@ -53,6 +72,7 @@ header ul a {
     font-size: 0.83rem;
 }
 
+/* Estilos da seção principal */
 #home {
     font-family: Agrandir Grand;
     color: #545454;
@@ -64,32 +84,19 @@ header ul a {
     width: 600px;
 }
 
-main {
+.container main {
     flex: 1 1 0;
     overflow-x: hidden;
     border: 0;
 }
 
-.footer {
+/* Estilos dos ícones de redes sociais */
+.button {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    line-height: 50px;
-    text-align: right;
-}
-
-footer ul {
-    position: absolute;
-    float: right;
-    display: table;
-    list-style: none;
-}
-
-footer ul li {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 10px;
+    right: 15px;
+    bottom: 15px;
+    border: none;
+    background: transparent;
 }
 
 .icones {
@@ -105,7 +112,7 @@ footer ul li {
 }
 
 .icones li {
-    margin: 0 5px;
+    margin: 0 6px;
     display: inline-block;
 }
 
@@ -115,7 +122,7 @@ footer ul li {
     height: 2.5rem;
     background: #cb6ce6;
     color: #ffffff;
-    margin: 0 6px;
+    border: none;
     border-radius: 50px;
     justify-content: center;
     text-decoration: none;
@@ -129,12 +136,14 @@ footer ul li {
 }
 
 .icones a i {
-    transition: 00.4s all;
+    transition: 0.4s all;
 }
+
 .icones a:hover > i {
     transform: scale(1.3) rotate(20deg);
 }
 
+/* Consultas de mídia para estilos responsivos */
 @media (max-width: 768px) {
     /* Estilos para telas menores, como smartphones */
 }
