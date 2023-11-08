@@ -67,7 +67,7 @@ function smoothScrollTo(endX, endY, duration) {
 
 // Efeito de aparição de elementos da página
 
-const observer = new IntersectionObserver(entries => {
+/*const observer = new IntersectionObserver(entries => {
 
     Array.from(entries).forEach(entry => {
         if (entry.intersectionRatio >= 1) {
@@ -80,4 +80,4 @@ const observer = new IntersectionObserver(entries => {
 
 Array.from(document.querySelectorAll('')).forEach(element => {
     observer.observe(element)
-})
+})*/
