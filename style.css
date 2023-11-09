@@ -1,7 +1,6 @@
 /* Definição da fonte personalizada */
-@font-face {
-    font-family: "Agrandir Grand";
-    src: url(Fontes/agrandir-grand-heavy.otf) format('opentype');
+*{
+    font-family: 'Exo 2', sans-serif;
 }
 
 /* Reset CSS básico */
@@ -14,12 +13,19 @@
 }
 
 /* Estilos gerais do contêiner da página */
+
+.flex {
+    display: flex;
+}
+
 .container {
     background-image: linear-gradient(to right, #b8b8b8, #ffffff);
     background-size: 500% 100%;
     display: flex;
     flex-direction: column;
     min-height: 400vh;
+    margin: 200px;
+
     animation: degrade-animado 5s infinite alternate;
 }
 
@@ -46,6 +52,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
     transition: 1s;
 
 }
@@ -75,35 +82,33 @@ header.scroll ul a {
 }
 
 .header ul a {
-    font-family: Agrandir Grand;
     text-decoration: none;
     color: #545454;
     padding: 0 1.5rem;
     text-transform: uppercase;
-    font-weight: 300;
-    font-size: 0.83rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
 }
 
 .header a:hover {
     color:  #00ffff;
+    transition: 1s;
+    transform: scale(1.05);
 }
 
 .header a {
     transition: 2s;
 }
 
-.header a:hover {
-    transition: 1s;
-    transform: scale(1.3)
-}
 
 /* Estilos da seção principal */
 
 #home {
-    font-family: Agrandir Grand;
     color: #545454;
     text-align: center;
-    font-size: 0.83rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #home img {
@@ -117,13 +122,73 @@ header.scroll ul a {
 }
 
 section {
-    font-family: Agrandir Grand;
     color: #545454;
     text-align: left;
-    font-size: 0.83rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     min-height: 100vh;
     padding-top: 3rem;
 }
+
+/* Estilo Sobre mim */
+
+section #sobre {
+    padding: 40px 4%;
+    margin: 0 auto;
+}
+
+section #sobre .flex {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 90px;
+}
+
+#sobre .txt-sobre-mim {
+    flex: 1; /* Ocupar todo o espaço disponível */
+}
+
+#sobre .txt-sobre-mim h1 {
+    font-size: 50px;
+    margin: 200px 0 0;
+}
+
+#sobre .txt-sobre-mim h1 span {
+    color:#cb6ce6;
+}
+
+#sobre .txt-sobre-mim p {
+    margin: 40px 0;
+}
+
+#sobre .img-sobre-mim img {
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    margin-left: auto;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+#sobre .icones-tecnologias ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#sobre .icones-tecnologias img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
 
 /* Estilos dos ícones de redes sociais */
 .button {
